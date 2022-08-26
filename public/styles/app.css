@@ -7,6 +7,7 @@
     --theme-medium: #7D6B81;
     --theme-light: #989FCE;
     --theme-accent: #347FC4;
+    --theme-alice: #34547f;
     --gray-dark: #333;
     --gray-medium: #888;
     --gray-light: #BBB;
@@ -40,6 +41,11 @@ a, a:visited {
 
 .app {
     position: relative;
+}
+
+.main-content {
+    margin-top: 55px;
+    padding: 28px;
 }
 
 /***************** nav styles ***************/
@@ -98,4 +104,71 @@ nav.main-nav, a:hover, nav.mian-nav a:active {
 
 nav.main-nav .greeting {
     color: var(--theme-light);
+}
+
+/***************** Buttons *****/
+:is(a, button).btn {
+    background-color: var(--gray-medium);
+    border: 1px solid #555;
+    font-size: 16px;
+    padding: 8px 16px;
+    margin: 1px;
+    border-radius: 3px;
+    color: var(--black);
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+:is(a, button):hover {
+    cursor: pointer;
+}
+
+:is(a, button).btn--xs {
+    padding: 2px 4px;
+    font-size: 12px;
+}
+
+:is(a, button).btn--primary {
+    background-color: var(--theme-accent);
+    color: var(--white);
+    border-color: var(--theme-midium);
+}
+
+:is(a, button).btn--primary:hover {
+    background-color: var(--theme-alice);
+}
+
+:is(a, button).btn--primary-alt {
+    background-color: var(--theme-dark);
+    color: var(--white);
+    border-color: var(--theme-accent);
+}
+
+:is(a, button).btn--primary-alt:hover {
+    background-color: var(--theme-medium);
+}
+
+
+:is(a, button).btn--danger {
+    background-color: var(--danger-color);
+    color: var(--white);
+    border-color: var(--danger-color);
+}
+
+:is(a, button).btn--danger:hover {
+    color: var(--white);
+    background-color: #711616;
+    border-color: #711616;
+}
+
+:is(a, button).btn--secondary {
+    color: var(--black);
+    background-color: var(--gray-medium);    
+    border-color: var(--gray-dark);
+}
+
+:is(a, button).btn--secondary:hover {
+    color: var(--white);
+    background-color: var(--gray-dark);    
 }
